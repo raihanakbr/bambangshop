@@ -65,11 +65,11 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [X] Commit: `Implement unsubscribe function in Notification controller.`
     -   [X] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
 -   **STAGE 3: Implement notification mechanism**
-    -   [ ] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
-    -   [ ] Commit: `Implement notify function in Notification service to notify each Subscriber.`
-    -   [ ] Commit: `Implement publish function in Program service and Program controller.`
-    -   [ ] Commit: `Edit Product service methods to call notify after create/delete.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-3" questions in this README.
+    -   [X] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
+    -   [X] Commit: `Implement notify function in Notification service to notify each Subscriber.`
+    -   [X] Commit: `Implement publish function in Program service and Program controller.`
+    -   [X] Commit: `Edit Product service methods to call notify after create/delete.`
+    -   [X] Write answers of your learning module's "Reflection Publisher-3" questions in this README.
 
 ## Your Reflections
 This is the place for you to write reflections:
@@ -87,3 +87,6 @@ This is the place for you to write reflections:
 3. Postman serves to test the API of a project. In my opinion, Postman is very useful in testing APIs because of the features it provides, such as making requests with various tokens or request bodies, customizing the environment of a collection, and there is also monitoring feature.
 
 #### Reflection Publisher-3
+1. In this case, we are using the push model variation of the observer pattern, where the publisher pushes data or updates to the subscriber.
+2. The advantage of using the pull model variation is that it is more efficient because updates or changes are only received when needed. The disadvantage of this variation is the delay in updates, where new information can only be received when the subscriber requests it.
+3. Multi-threading in this project is used to send notifications to all subscribers asynchronously. If multi-threading is not used, the notifications sent to subscribers will take longer because they are done synchronously.
