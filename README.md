@@ -58,12 +58,12 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [X] Commit: `Implement delete function in Subscriber repository.`
     -   [X] Write answers of your learning module's "Reflection Publisher-1" questions in this README.
 -   **STAGE 2: Implement services and controllers**
-    -   [ ] Commit: `Create Notification service struct skeleton.`
-    -   [ ] Commit: `Implement subscribe function in Notification service.`
-    -   [ ] Commit: `Implement subscribe function in Notification controller.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification service.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification controller.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
+    -   [X] Commit: `Create Notification service struct skeleton.`
+    -   [X] Commit: `Implement subscribe function in Notification service.`
+    -   [X] Commit: `Implement subscribe function in Notification controller.`
+    -   [X] Commit: `Implement unsubscribe function in Notification service.`
+    -   [X] Commit: `Implement unsubscribe function in Notification controller.`
+    -   [X] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
 -   **STAGE 3: Implement notification mechanism**
     -   [ ] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
     -   [ ] Commit: `Implement notify function in Notification service to notify each Subscriber.`
@@ -82,5 +82,8 @@ This is the place for you to write reflections:
 3. In this case, both singleton and DashMap are equally necessary as they complement each other. Singleton ensures that only one instance will exist in one interface. Additionally, DashMap will ensure that the existing subscriber data remains safely accessible by different threads.
 
 #### Reflection Publisher-2
+1. In my opinion, services and repositories should be separated from the model to make it easier to read and modify in case of changes. If these three functionalities are combined into one file, the file will be too long and difficult to read. By separating these functionalities into their own files, each file will be easier to read and modify.
+2. If we only use the model (combining service and repository into one file), the file will be difficult to read. Additionally, this time we have three models, namely program, subscriber, and notification, so the file will be very long and difficult to read. Difficulty in reading also affects the level of difficulty in modifying or tinkering with the code when there are changes.
+3. Postman serves to test the API of a project. In my opinion, Postman is very useful in testing APIs because of the features it provides, such as making requests with various tokens or request bodies, customizing the environment of a collection, and there is also monitoring feature.
 
 #### Reflection Publisher-3
