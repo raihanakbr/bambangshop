@@ -48,15 +48,15 @@ You can install Postman via this website: https://www.postman.com/downloads/
     (You might want to use `cargo check` if you only need to verify your work without running the app.)
 
 ## Mandatory Checklists (Publisher)
--   [ ] Clone https://gitlab.com/ichlaffterlalu/bambangshop to a new repository.
+-   [X] Clone https://gitlab.com/ichlaffterlalu/bambangshop to a new repository.
 -   **STAGE 1: Implement models and repositories**
-    -   [ ] Commit: `Create Subscriber model struct.`
-    -   [ ] Commit: `Create Notification model struct.`
-    -   [ ] Commit: `Create Subscriber database and Subscriber repository struct skeleton.`
-    -   [ ] Commit: `Implement add function in Subscriber repository.`
-    -   [ ] Commit: `Implement list_all function in Subscriber repository.`
-    -   [ ] Commit: `Implement delete function in Subscriber repository.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-1" questions in this README.
+    -   [X] Commit: `Create Subscriber model struct.`
+    -   [X] Commit: `Create Notification model struct.`
+    -   [X] Commit: `Create Subscriber database and Subscriber repository struct skeleton.`
+    -   [X] Commit: `Implement add function in Subscriber repository.`
+    -   [X] Commit: `Implement list_all function in Subscriber repository.`
+    -   [X] Commit: `Implement delete function in Subscriber repository.`
+    -   [X] Write answers of your learning module's "Reflection Publisher-1" questions in this README.
 -   **STAGE 2: Implement services and controllers**
     -   [ ] Commit: `Create Notification service struct skeleton.`
     -   [ ] Commit: `Implement subscribe function in Notification service.`
@@ -77,6 +77,9 @@ This is the place for you to write reflections:
 ### Mandatory (Publisher) Reflections
 
 #### Reflection Publisher-1
+1. A single model struct is sufficient for the bambangshop case at hand. Interfaces are needed when there are several types with different behaviors in their subscribers. However, in this module, subscribers only have one type or all subscribers are the same, so there is no need to use interfaces.
+2. In my opinion, the use of DashMap is more suitable for this case. DashMap uses key input to retrieve values based on those keys. Therefore, searching for data or values will be easier because we only need to input the id or URL.
+3. In this case, both singleton and DashMap are equally necessary as they complement each other. Singleton ensures that only one instance will exist in one interface. Additionally, DashMap will ensure that the existing subscriber data remains safely accessible by different threads.
 
 #### Reflection Publisher-2
 
